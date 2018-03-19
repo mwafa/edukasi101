@@ -1,0 +1,6 @@
+{
+    "require": {
+        "phpoffice/phpspreadsheet": "^1.2",
+        "lazuli/vsxlsx": "^0.0.1"
+    }
+}
