@@ -11,7 +11,7 @@ class admin extends CI_Controller {
     {
         
         $data['pages']  = array('admin','dashboard');
-    
+        
         $this->load->view('admin/header',$data);
         $this->load->view('admin/dashboard',$data);
         $this->load->view('admin/footer',$data);
@@ -38,5 +38,17 @@ class admin extends CI_Controller {
         $data['costum_js']  =   $this->load->view('admin/data_js','',true);
         $data['costum_js'] .=   $this->load->view('admin/input_data_js','',true);
         $this->load->view('admin/footer',$data);
+    }
+
+    public function absensi()
+    {
+        $data['pages'] = array('admin','absensi');
+        $data['costum_js'] = $this->load->view('admin/data_js','', true);
+        
+
+        $this->load->view('admin/header', $data, FALSE);
+        $this->load->view('admin/data', $data, FALSE);
+        $this->load->view('admin/footer', $data, FALSE);
+        
     }
 }
